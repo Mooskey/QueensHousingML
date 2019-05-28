@@ -2,7 +2,9 @@
 title: "Math 390 Final Project"
 author: "Moshe Weiss"
 date: "5/10/2019"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 In this model, as in all models, we seek to abstract reality from an unknowable number of unmeasurable affecting factors into several observable features. Using the data from 2016 and 2017 apartment sales in Queens, New York, along with the aid of algorithms and largescale computations, we seek to predict sale prices for apartments in the future. The three modelling techniques chosen are Linear Modelling, Regression Tree Modelling, and Random Forest Modelling. At a high level, these function as follows:
@@ -25,7 +27,7 @@ The data used for our model is from Multiple Listing Services Listings. The data
 
 ```{r}
 #Data Cleaning and Imputation
-housing_data = read.csv("writing_assignments/housing_data_2016_2017.csv", stringsAsFactors = FALSE)
+housing_data = read.csv("housing_data_2016_2017.csv", stringsAsFactors = FALSE)
 #fix feature selection
 q_housing = as.data.frame(housing_data)
 ```
